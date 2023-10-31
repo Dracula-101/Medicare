@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "606675885939",
+    "project_id": "medicare-flutter",
+    "storage_bucket": "medicare-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606675885939:android:8c3381ba5790cb97a66f06",
+        "android_client_info": {
+          "package_name": "io.github.dracula101.medicare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm1dZFE4AtVHfXuFY8KFRJ3RWA-saDIeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
