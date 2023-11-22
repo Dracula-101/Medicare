@@ -1,10 +1,11 @@
+import 'package:get_it/get_it.dart';
 import 'package:medicare/injector/injector.dart';
 import 'package:medicare/manager/database_manager.dart';
 
 class DatabaseModule {
   DatabaseModule._();
 
-  static final _injector = Injector.instance;
+  static final GetIt _injector = Injector.instance;
 
   static void init() {
     _injector.registerSingletonAsync<AppDatabaseManager>(() async {

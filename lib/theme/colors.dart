@@ -48,11 +48,11 @@ class AppColors {
   static const Color greyLight = Color(0xFF929CAD);
 
   static const Color subtleGrey = Color(0xFFFAFAFE);
-  
+
   static const Color white = Color(0xFFFFFFFF);
   static const Color subtleWhite = Color(0xFFE5E5E5);
   static const Color black = Color(0xFF000000);
-  static const Color subtleBlack = Color(0xFF1A1A1A);
+  static const Color subtleBlack = Color(0xFF252525);
 
   static const Color red = Color(0xFFE35F47);
   static const Color green = Color(0xFF18B055);

@@ -14,12 +14,12 @@ class GetStorageService implements LocalStorageService {
     required LogService logService,
   }) {
     _logService = logService;
-    init();
   }
 
   @override
-  FutureOr<void> init() {
+  FutureOr<void> init() async{
     _storage = GetStorage();
+    bool isIntialized = await _storage.initStorage;
     Injector.instance.signalReady(this);
   }
 
@@ -101,6 +101,39 @@ class GetStorageService implements LocalStorageService {
     } catch (e, s) {
       _logService.e('GetStorageService: removeEntry: failed', e, s);
       return false;
+    }
+  }
+
+  @override
+  FutureOr<void> addList(
+      {required String key,
+      required List<Object> list,
+      required Object Function(Object p1) toJson}) {
+    try {
+      _storage.write(key, list.map((e) => toJson(e)).toList());
+    } catch (e, s) {
+      _logService.e('GetStorageService: addList: failed', e, s);
+    }
+  }
+
+  @override
+  List<Object>? getList(
+      {required String key, required Object Function(Object p1) fromJson}) {
+    dynamic value = _storage.read(key);
+    if (value is List<Object>) {
+      return value.map((e) => fromJson(e)).toList();
+    } else {
+      _logService.w('GetStorageService: getList: value is not List<Object>');
+      return null;
+    }
+  }
+
+  @override
+  FutureOr<void> clear() {
+    try {
+      _storage.erase();
+    } catch (e, s) {
+      _logService.e('GetStorageService: clear: failed', e, s);
     }
   }
 }

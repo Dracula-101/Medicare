@@ -10,16 +10,11 @@ import 'package:logger/logger.dart';
 Future<void> bootstrap({
   AsyncCallback? firebaseInitialization,
 }) async {
-  await runZonedGuarded(
-    () async {
-      WidgetsFlutterBinding.ensureInitialized();
-      await firebaseInitialization?.call();
-      Logger.level = Level.trace;
-      Injector.init();
-      await Injector.instance.allReady();
-      Bloc.observer = AppBlocObserver();
-      runApp(const MedicareApp());
-    },
-    (error, stack) {},
-  );
+  WidgetsFlutterBinding.ensureInitialized();
+  await firebaseInitialization?.call();
+  Logger.level = Level.trace;
+  Injector.init();
+  await Injector.instance.allReady(timeout: const Duration(seconds: 5));
+  Bloc.observer = AppBlocObserver();
+  runApp(const MedicareApp());
 }

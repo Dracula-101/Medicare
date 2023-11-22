@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:medicare/services/local_storage_service/local_storage_service.dart';
 import 'package:medicare/services/log_service/log_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,7 +11,6 @@ class SharedPreferencesService implements LocalStorageService {
     required LogService logService,
   }) {
     _logService = logService;
-    init();
   }
   late final SharedPreferences _pref;
   late final LogService _logService;
@@ -83,5 +83,39 @@ class SharedPreferencesService implements LocalStorageService {
   }) async {
     final bool result = await _pref.remove(key);
     return result;
+  }
+
+  @override
+  FutureOr<void> addList({
+    required String key,
+    required List<Object> list,
+    required Object Function(Object) toJson,
+  }) async {
+    // get old list
+    final List<String>? oldList = getStringList(key: key);
+    // convert to json
+    final List<String> jsonList =
+        list.map((e) => json.encode(toJson(e))).toList();
+    // add new list
+    jsonList.addAll(oldList ?? []);
+    // save to storage
+    await _pref.setStringList(key, jsonList);
+  }
+
+  @override
+  List<Object>? getList(
+      {required String key, required Object Function(Object p1) fromJson}) {
+    final List<String>? jsonList = getStringList(key: key);
+    if (jsonList == null) {
+      return null;
+    }
+    final List<Object> list =
+        jsonList.map((e) => fromJson(json.decode(e))).toList();
+    return list;
+  }
+
+  @override
+  FutureOr<void> clear() async {
+    _pref.clear();
   }
 }

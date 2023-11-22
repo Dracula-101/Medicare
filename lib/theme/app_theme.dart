@@ -60,15 +60,15 @@ class AppThemeData {
     );
   }
 
-  static const ColorScheme lightColorScheme = ColorScheme(
+  static const ColorScheme lightColorScheme = ColorScheme.light(
     primary: AppColors.blue,
     onPrimary: AppColors.white,
     primaryContainer: AppColors.blueLight,
     onPrimaryContainer: AppColors.greyDark,
     secondary: AppColors.blue,
     onSecondary: AppColors.white,
-    secondaryContainer: AppColors.blueLight,
-    onSecondaryContainer: AppColors.greyDark,
+    secondaryContainer: AppColors.grey100,
+    onSecondaryContainer: AppColors.grey700,
     tertiary: AppColors.blueDark,
     onTertiary: AppColors.white,
     tertiaryContainer: AppColors.blueLight,
@@ -78,22 +78,23 @@ class AppThemeData {
     onSurface: AppColors.subtleBlack,
     error: AppColors.red,
     onError: AppColors.white,
+    shadow: AppColors.greyLight,
     brightness: Brightness.light,
   );
 
-  static const ColorScheme darkColorScheme = ColorScheme(
+  static const ColorScheme darkColorScheme = ColorScheme.dark(
     primary: AppColors.blue,
     onPrimary: AppColors.white,
     primaryContainer: AppColors.blueLight,
     onPrimaryContainer: AppColors.greyDark,
     secondary: AppColors.greyDark,
     onSecondary: AppColors.white,
-    secondaryContainer: AppColors.grey700,
+    secondaryContainer: AppColors.grey600,
     onSecondaryContainer: AppColors.white,
     tertiary: AppColors.blueDark,
     onTertiary: AppColors.greyLight,
     tertiaryContainer: AppColors.blueLight,
-    background: AppColors.subtleBlack,
+    background: AppColors.black,
     onBackground: AppColors.white,
     surface: AppColors.subtleBlack,
     onSurface: AppColors.subtleWhite,
@@ -102,7 +103,7 @@ class AppThemeData {
     brightness: Brightness.dark,
   );
 
-  static const _regular = FontWeight.w600;
+  static const _regular = FontWeight.w500;
   static const _medium = FontWeight.w600;
   static const _semiBold = FontWeight.w700;
   static const _bold = FontWeight.w800;
@@ -116,88 +117,109 @@ class AppThemeData {
       fontSize: 20,
       fontWeight: _semiBold,
       letterSpacing: _letterSpacingHeadline,
-      color: AppColors.grey,
     ),
     headlineMedium: GoogleFonts.workSans(
       fontSize: 22,
       fontWeight: _bold,
       letterSpacing: _letterSpacingHeadline,
-      color: AppColors.grey,
     ),
     headlineLarge: GoogleFonts.workSans(
       fontSize: 28,
       fontWeight: _extraBold,
       letterSpacing: _letterSpacingHeadline,
-      color: AppColors.grey,
     ),
     displaySmall: GoogleFonts.workSans(
       fontSize: 14,
       fontWeight: _regular,
       letterSpacing: _letterSpacingDisplay,
-      color: AppColors.black,
     ),
     displayMedium: GoogleFonts.workSans(
       fontSize: 16,
       fontWeight: _medium,
       letterSpacing: _letterSpacingDisplay,
-      color: AppColors.black,
     ),
     displayLarge: GoogleFonts.workSans(
       fontSize: 18,
       fontWeight: _semiBold,
       letterSpacing: _letterSpacingDisplay,
-      color: AppColors.black,
     ),
     bodySmall: GoogleFonts.workSans(
       fontSize: 12,
       fontWeight: _regular,
-      color: AppColors.black,
     ),
     bodyMedium: GoogleFonts.workSans(
       fontSize: 14,
       fontWeight: _regular,
-      color: AppColors.black,
     ),
     bodyLarge: GoogleFonts.workSans(
       fontSize: 16,
       fontWeight: _regular,
-      color: AppColors.black,
     ),
     labelSmall: GoogleFonts.workSans(
       fontSize: 10,
       fontWeight: _regular,
       letterSpacing: _letterSpacingCommon,
-      color: AppColors.black,
     ),
     labelMedium: GoogleFonts.workSans(
       fontSize: 12,
       fontWeight: _regular,
       letterSpacing: _letterSpacingCommon,
-      color: AppColors.black,
     ),
     labelLarge: GoogleFonts.workSans(
       fontSize: 14,
       fontWeight: _regular,
       letterSpacing: _letterSpacingCommon,
-      color: AppColors.black,
     ),
     titleSmall: GoogleFonts.workSans(
-      fontSize: 10,
-      fontWeight: _semiBold,
+      fontSize: 14,
+      fontWeight: _regular,
       letterSpacing: _letterSpacingCommon,
-      color: AppColors.black,
     ),
     titleMedium: GoogleFonts.workSans(
-      fontSize: 12,
-      fontWeight: _semiBold,
+      fontSize: 16,
+      fontWeight: _regular,
       letterSpacing: _letterSpacingCommon,
-      color: AppColors.black,
     ),
     titleLarge: GoogleFonts.workSans(
-      fontSize: 14,
-      fontWeight: _semiBold,
+      fontSize: 18,
+      fontWeight: _regular,
       letterSpacing: _letterSpacingCommon,
-      color: AppColors.black,
     ),
+  );
+}
+
+BoxShadow boxShadow() {
+  return BoxShadow(
+    color: const Color(0xff18396B).withOpacity(0.05),
+    blurRadius: 20,
+    spreadRadius: 0,
+    offset: const Offset(2, 0),
+  );
+}
+
+BoxShadow buttonShadow() {
+  return BoxShadow(
+    color: const Color(0xff0F274A).withOpacity(0.1),
+    blurRadius: 16,
+    spreadRadius: 0,
+    offset: const Offset(0, 3),
+  );
+}
+
+BoxShadow cardShadow() {
+  return BoxShadow(
+    color: const Color(0xff123569).withOpacity(0.2),
+    blurRadius: 72,
+    spreadRadius: 0,
+    offset: const Offset(6, 15),
+  );
+}
+
+BoxShadow cardShadow2() {
+  return BoxShadow(
+    color: const Color(0xff133A75).withOpacity(0.2),
+    blurRadius: 72,
+    spreadRadius: 0,
+    offset: const Offset(16, 15),
   );
 }

@@ -62,6 +62,7 @@ class _App extends StatelessWidget {
       darkTheme: AppThemeData.darkThemeData,
       routerConfig: AppRouter.router,
       title: 'Medicare App',
+      debugShowCheckedModeBanner: false,
     );
   }
 }

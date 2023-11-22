@@ -35,4 +35,19 @@ abstract class LocalStorageService {
   FutureOr<bool> removeEntry({
     required String key,
   });
+
+  // list
+  FutureOr<void> addList({
+    required String key,
+    required List<Object> list,
+    required Object Function(Object) toJson,
+  });
+
+  // get list
+  List<Object>? getList({
+    required String key,
+    required Object Function(Object) fromJson,
+  });
+
+  FutureOr<void> clear();
 }

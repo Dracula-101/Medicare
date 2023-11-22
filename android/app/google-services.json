@@ -12,7 +12,20 @@
           "package_name": "io.github.dracula101.medicare"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "606675885939-hcli1k3kdvnk8bkm7c7634usrhbqoimh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.dracula101.medicare",
+            "certificate_hash": "c3b4d86cfaa2fdc185c7185650998d3cbf06f3c8"
+          }
+        },
+        {
+          "client_id": "606675885939-es8vorpt6vr50i10amc28b7hr31e90hb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAm1dZFE4AtVHfXuFY8KFRJ3RWA-saDIeU"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606675885939-es8vorpt6vr50i10amc28b7hr31e90hb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

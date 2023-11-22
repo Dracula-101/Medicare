@@ -11,6 +11,8 @@ class BlocModule {
       () => AppBloc(
         appService: injector(),
         logService: injector(),
+        authService: injector(),
+        localStorageService: injector(),
       ),
     );
     // ..registerFactory<DogImageRandomBloc>(
