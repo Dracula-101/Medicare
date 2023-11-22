@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>606675885939-5med1dti0q4vv53jq2dtckagsvilr9hg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.606675885939-5med1dti0q4vv53jq2dtckagsvilr9hg</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>606675885939-hcli1k3kdvnk8bkm7c7634usrhbqoimh.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBSb2xe-k5pysUfdModHtfuaOwIxSamUHU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>606675885939</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.github.dracula101.medicare</string>
+	<key>PROJECT_ID</key>
+	<string>medicare-flutter</string>
+	<key>STORAGE_BUCKET</key>
+	<string>medicare-flutter.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:606675885939:ios:92e5f692e09084b5a66f06</string>
+</dict>
+</plist>
