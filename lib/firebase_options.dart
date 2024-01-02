@@ -50,21 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAm1dZFE4AtVHfXuFY8KFRJ3RWA-saDIeU',
-    appId: '1:606675885939:android:8c3381ba5790cb97a66f06',
-    messagingSenderId: '606675885939',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
     projectId: 'medicare-flutter',
     storageBucket: 'medicare-flutter.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBSb2xe-k5pysUfdModHtfuaOwIxSamUHU',
-    appId: '1:606675885939:ios:92e5f692e09084b5a66f06',
-    messagingSenderId: '606675885939',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
     projectId: 'medicare-flutter',
     storageBucket: 'medicare-flutter.appspot.com',
-    androidClientId: '606675885939-hcli1k3kdvnk8bkm7c7634usrhbqoimh.apps.googleusercontent.com',
-    iosClientId: '606675885939-5med1dti0q4vv53jq2dtckagsvilr9hg.apps.googleusercontent.com',
+    androidClientId: '',
+    iosClientId: '',
     iosBundleId: 'io.github.dracula101.medicare',
   );
 }
