@@ -45,3 +45,14 @@ app.*.map.json
 
 
 assets/secrets/**
+#frezed and generated files
+lib/generated/**
+lib/freezed/*.freezed.dart
+lib/freezed/*.g.dart
+
+# .g files
+lib/**/*.g.dart
+
+# .freezed files
+lib/**/*.freezed.dart
+
